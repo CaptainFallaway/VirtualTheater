@@ -1,0 +1,3 @@
+node_modules
+
+# Weirdly i only need to ignore node_modules
