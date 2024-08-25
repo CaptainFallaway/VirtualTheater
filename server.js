@@ -1,14 +1,13 @@
 import express from "express"
 import { handler } from "./frontend/build/handler.js"
+import dotenv from "dotenv"
+
+dotenv.config()
 
 const app = express()
 
-const PORT = 3000
-const HOST = "localhost"
-
-app.get("/test", (req, res) => {
-  res.send("Testing!!!!!")
-})
+const PORT = process.env.PORT || 3000
+const HOST = process.env.HOST || "localhost"
 
 app.use(handler)
 
